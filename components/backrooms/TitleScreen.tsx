@@ -106,21 +106,41 @@ export function TitleScreen() {
           [ CLICK ANYWHERE TO ENTER ]
         </p>
 
-        {/* Warning text */}
-        <p 
-          className="mt-8 text-xs font-mono max-w-md mx-auto"
+        {/* Instructions */}
+        <div 
+          className="mt-8 p-4 border border-dashed max-w-md mx-auto"
           style={{
-            color: '#666',
-            lineHeight: 1.6,
+            borderColor: '#d4a84b',
+            background: 'rgba(212, 168, 75, 0.05)',
           }}
         >
-          WARNING: AUDIO ENABLED EXPERIENCE<br />
-          SCROLL TO NAVIGATE | CLICK MEDIA TO VIEW
-        </p>
+          <p 
+            className="text-sm font-mono mb-2"
+            style={{
+              color: '#d4a84b',
+              fontFamily: 'Courier New, monospace',
+            }}
+          >
+            ▼ HOW TO NAVIGATE ▼
+          </p>
+          <p 
+            className="text-xs font-mono"
+            style={{
+              color: '#999',
+              lineHeight: 1.8,
+            }}
+          >
+            <span style={{ color: '#33ff00' }}>SCROLL DOWN</span> → Walk forward<br />
+            <span style={{ color: '#33ff00' }}>SCROLL UP</span> → Walk backward<br />
+            <span style={{ color: '#33ff00' }}>CLICK</span> → View media / Vote<br />
+            Audio enabled for immersion
+          </p>
+        </div>
       </div>
 
       {/* Corner decorations */}
       <div 
+        className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2"
         style={{ borderColor: '#d4a84b', opacity: 0.5 }}
       />
       <div 
